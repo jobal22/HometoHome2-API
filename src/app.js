@@ -5,6 +5,8 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
+const addressesRouter = require('./addresses/addresses-router')
+const listsRouter = require('./lists/lists-router')
 
 const app = express()
 
