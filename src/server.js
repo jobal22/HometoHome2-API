@@ -1,22 +1,23 @@
 require('dotenv').config()
 
 const knex = require('knex')
-// const jsonServer = require('json-server')
+const jsonServer = require('json-server')
 const app = require('./app')
 // const db = require('./db')
-const { PORT, DB_URL } = require('./config')
+const { PORT, Database_URL } = require('./config')
 
-// const middlewares = jsonServer.defaults()
+const middlewares = jsonServer.defaults()
 
 const db = knex({
   client: 'pg',
-  connection: DB_URL,
+  connection: Database_URL,
 })
 
 app.set('db', db)
-// app.use(middlewares)
+app.use(middlewares)
 
 
 app.listen(PORT, () => {
-  console.log(`Server listening at http://localhost:${PORT}`)
+  console.log(`Server listening at https://radiant-caverns-61441.herokuapp.com`)
 })
+//http://localhost:${PORT}

@@ -13,15 +13,17 @@
   },
   "keywords": [],
   "engines": {
-       "node": "10.11.0"
+    "node": "10.11.0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "engines": "^0.4.0",
     "express": "^4.17.1",
     "helmet": "^3.22.0",
+    "json-server": "^0.16.1",
     "knex": "^0.21.1",
     "morgan": "^1.10.0",
     "pg": "^7.18.2",
