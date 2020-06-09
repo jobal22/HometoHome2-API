@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS hometohome3_addresses;
