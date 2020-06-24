@@ -1,25 +1,9 @@
-// const path = require('path')
 const express = require('express')
-// const {v4: uuid} = require('uuid')
-// const xss = require('xss')
 const AddressesService = require('./addresses-service')
 const logger = require('../logger')
 
 const addressesRouter = express.Router()
 const jsonParser = express.json()
-
-// const serializeAddress = address => ({
-//   id: address.id,
-//   street: xss(address.street),
-//   city: xss(address.city),
-//   state: xss(address.state),
-//   zip: xss(address.zip),
-//   name: xss(address.name),
-//   email: xss(address.email),
-//   gospelpresentation: xss(address.gospelpresentation),
-//   newsalvations: Number(address.newsalvations),
-//   notes: xss(address.notes)
-// })
 
 addressesRouter
   .route('/')
@@ -105,15 +89,6 @@ addressesRouter
   .patch(jsonParser, (req, res, next) => {
     const {street, city, state, zip, name, email, gospelpresentation, newsalvations, notes} = req.body
     const addressToUpdate = { street, city, state, zip, name, email, gospelpresentation, newsalvations, notes}
-
-    // for (const field of ['name']) {
-    //     if (!addressToUpdate[field]) {
-    //       logger.error(`${field} is required`)
-    //       return res.status(400).send({
-    //         error: { message: `'${field}' is required` }
-    //       })
-    //     }
-    //   }
 
       AddressesService.updateAddress(
         req.app.get('db'),

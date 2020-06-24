@@ -1,18 +1,9 @@
-// const path = require('path')
 const express = require('express')
-// const xss = require('xss')
 const ListsService = require('./lists-service')
 const logger = require('../logger')
 
 const listsRouter = express.Router()
 const jsonParser = express.json()
-
-// const serializeList = lists => ({
-//   id: list.id,
-//   name: xss(list.name),
-//   gpId: xss(list.gpId),
-//   nsId: xss(list.nsId)
-// })
 
 listsRouter
   .route('/')
