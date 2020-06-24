@@ -1,26 +1,9 @@
-# Express Boilerplate!
+# Home to Home API
 
-This is a boilerplate project used for starting new projects!
+This is an API that was made for the 'Home to Home App.'
 
-## Set up
+## Description
+This API connects to a Database that has two tables: 1) lists and 2) addresses. The relationships between the lists and addresses are found in the 'gospelPresentation' and the 'newSalvations' columns. The API allows the App to make GET, POST, PATCH, and DELETE request for the addresses table.
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
-
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
-
-## Scripts
-
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+## Technologies Used
+Node/Express/PostgreSQL

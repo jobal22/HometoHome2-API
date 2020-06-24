@@ -1,0 +1,80 @@
+function makeAddressesArray() {
+    return [
+        {
+            id: 1,
+            title: '111 Stanson Rd',
+            city: 'Atlanta',
+            state: '78912',
+            zip: '30040',
+            name: 'N/A',
+            phone: '0',
+            gospelpresentation: 'N/A',
+            newsalvations: '0',
+            notes: 'N/A',
+        },
+        {
+            id: 2,
+            title: '222 Stanson Rd',
+            city: 'Atlanta',
+            state: '78912',
+            zip: '30040',
+            name: 'N/A',
+            phone: '0',
+            gospelpresentation: 'N/A',
+            newsalvations: '0',
+            notes: 'N/A',
+        },
+        {
+            id: 3,
+            title: '333 Stanson Rd',
+            city: 'Atlanta',
+            state: '78912',
+            zip: '30040',
+            name: 'N/A',
+            phone: '0',
+            gospelpresentation: 'N/A',
+            newsalvations: '0',
+            notes: 'N/A',
+        },
+        {
+            id: 4,
+            title: '444 Stanson Rd',
+            city: 'Atlanta',
+            state: '78912',
+            zip: '30040',
+            name: 'N/A',
+            phone: '0',
+            gospelpresentation: 'N/A',
+            newsalvations: '0',
+            notes: 'N/A',
+        },
+        {
+            id: 5,
+            title: '555 Stanson Rd',
+            city: 'Atlanta',
+            state: '78912',
+            zip: '30040',
+            name: 'N/A',
+            phone: '0',
+            gospelpresentation: 'N/A',
+            newsalvations: '0',
+            notes: 'N/A',
+        },
+        {
+            id: 6,
+            title: '666 Stanson Rd',
+            city: 'Atlanta',
+            state: '78912',
+            zip: '30040',
+            name: 'N/A',
+            phone: '0',
+            gospelpresentation: 'N/A',
+            newsalvations: '0',
+            notes: 'N/A',
+        }
+    ]
+}
+
+module.exports = {
+    makeAddressesArray
+}
