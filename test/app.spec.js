@@ -30,6 +30,24 @@ describe('Addresses', function() {
         expect(202);
       });
   });
+  it("should edit an address on PATCH", function() {
+    const newItem = { id: 444, street: "999 Stanson Rd", city: "Dougal", state: "California" };
+    return supertest(app)
+      .patch("/api/addresses/444")
+      .send(newItem)
+      .then(function(res) {
+        expect(202);
+      });
+  });
+  it("should delete an address on DELETE", function() {
+    const newItem = { id: 444, street: "999 Stanson Rd", city: "Dougal", state: "California" };
+    return supertest(app)
+      .delete("/api/addresses/444")
+      .send(newItem)
+      .then(function(res) { 
+        expect(202);
+      });
+  });
 });
 
 describe('Lists', function() {
@@ -40,4 +58,32 @@ describe('Lists', function() {
       expect(203);
     });
   });
+  it("should add an lists on POST", function() {
+    const newItem = { name: "TrialList", gpId: "yes", nsId: "1" };
+    return supertest(app)
+      .post("/api/lists")
+      .send(newItem)
+      .then(function(res) {
+        expect(202);
+      });
+  });
+  it("should edit an lists on PATCH", function() {
+    const newItem = { id: 333, name: "DoubleTrialList", gpId: "yes", nsId: "1" };
+    return supertest(app)
+      .patch("/api/lists/333")
+      .send(newItem)
+      .then(function(res) {
+        expect(202);
+      });
+  });
+  it("should delete an lists on DELETE", function() {
+    const newItem = { id: 333, name: "DoubleTrialList", gpId: "yes", nsId: "1" };
+    return supertest(app)
+      .delete("/api/lists/333")
+      .send(newItem)
+      .then(function(res) { 
+        expect(202);
+      });
+  });
+
 });
