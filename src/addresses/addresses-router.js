@@ -17,10 +17,10 @@ addressesRouter
     
   })
   .post(jsonParser, (req, res, next) => {
-    const { street, city, state, zip, name, email, gospelpresentation, newsalvations, notes} = req.body
-    const newAddress = { street, city, state, zip, name, email, gospelpresentation, newsalvations, notes}
+    const { number, street, city, state, zip, name, email, gospelpresentation, newsalvations, notes} = req.body
+    const newAddress = { number, street, city, state, zip, name, email, gospelpresentation, newsalvations, notes}
 
-    for (const field of ['street', 'city', 'state']) {
+    for (const field of ['number','street', 'city', 'state']) {
       if (!newAddress[field]) {
         logger.error(`${field} is required`)
         return res.status(400).send(`'${field}' is required`)
@@ -31,6 +31,7 @@ addressesRouter
     req.app.get('db'),
     newAddress
   )
+  // provides selected reading plan, as well as, an interactive comprehensive reading quiz.
     .then(address => {
       res
         .status(201)
@@ -87,8 +88,8 @@ addressesRouter
 
 
   .patch(jsonParser, (req, res, next) => {
-    const {street, city, state, zip, name, email, gospelpresentation, newsalvations, notes} = req.body
-    const addressToUpdate = { street, city, state, zip, name, email, gospelpresentation, newsalvations, notes}
+    const {number, street, city, state, zip, name, email, gospelpresentation, newsalvations, notes} = req.body
+    const addressToUpdate = { number, street, city, state, zip, name, email, gospelpresentation, newsalvations, notes}
 
       AddressesService.updateAddress(
         req.app.get('db'),
