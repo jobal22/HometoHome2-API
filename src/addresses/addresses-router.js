@@ -4,9 +4,6 @@ const logger = require('../logger')
 
 const addressesRouter = express.Router()
 const jsonParser = express.json()
-var expressBatchRequests = require('express-batch-requests');
-
-addressesRouter.post('/batch', expressBatchRequests);
 
 addressesRouter
   .route('/')
@@ -23,12 +20,12 @@ addressesRouter
     const { number, street, city, state, zip, name, email, gospelpresentation, newsalvations, notes} = req.body
     const newAddress = { number, street, city, state, zip, name, email, gospelpresentation, newsalvations, notes}
 
-    for (const field of ['number','street', 'city', 'state']) {
-      if (!newAddress[field]) {
-        logger.error(`${field} is required`)
-        return res.status(400).send(`'${field}' is required`)
-      }
-    }
+    // for (const field of ['number','street', 'city', 'state']) {
+    //   if (!newAddress[field]) {
+    //     logger.error(`${field} is required`)
+    //     return res.status(400).send(`'${field}' is required`)
+    //   }
+    // }
 
   AddressesService.insertAddress(
     req.app.get('db'),
