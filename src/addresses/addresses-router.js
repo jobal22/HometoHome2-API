@@ -4,6 +4,9 @@ const logger = require('../logger')
 
 const addressesRouter = express.Router()
 const jsonParser = express.json()
+var expressBatchRequests = require('express-batch-requests');
+
+addressesRouter.post('/batch', expressBatchRequests);
 
 addressesRouter
   .route('/')
